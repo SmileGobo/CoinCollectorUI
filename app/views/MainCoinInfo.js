@@ -9,4 +9,9 @@ define(['text!template/MainInfo.html', 'backbone'], function(TEMPLATE) {
         }
     });
     
+    
+    
+    
+    
+    
 });

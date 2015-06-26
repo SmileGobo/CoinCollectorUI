@@ -11,8 +11,5 @@ define(['backbone'], function(){
        },
        collection: null,
        model: null
-       
-       
-       
    });
 });
