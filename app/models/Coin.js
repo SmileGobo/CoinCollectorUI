@@ -1,5 +1,6 @@
 define(['backbone'], function(){
-    var img_path = '/app/coinsimg/';
+    
+    var img_path = window.location.href + '/app/coinsimg/';
     return Backbone.Model.extend({
         defaults:{
             id:1,
