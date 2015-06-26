@@ -1,0 +1,90 @@
+[
+	{
+		"id":1,
+		"countryName":"Австралия",
+		"denomination":"1 доллар",
+		"year":1984,
+		"avers":"01.JPG",
+		"revers":"02.JPG"
+	},
+	{
+		"id":2,
+		"countryName":"Австралия",
+		"denomination":"1 цент",
+		"year":1984,
+		"avers":"03.JPG",
+		"revers":"04.JPG"
+	},
+	{
+		"id":3,
+		"countryName":"Австралия",
+		"denomination":"2 доллара",
+		"year":1988,
+		"avers":"05.JPG",
+		"revers":"06.JPG"
+	},
+	{
+		"id":4,
+		"countryName":"Австралия",
+		"denomination":"2 цента",
+		"year":1973,
+		"avers":"07.JPG",
+		"revers":"08.JPG"
+	},
+	{
+		"id":5,
+		"countryName":"Австралия",
+		"denomination":"5 центов",
+		"year":1968,
+		"avers":"09.JPG",
+		"revers":"010.JPG"
+	},
+	{
+		"id":6,
+		"countryName":"Австралия",
+		"denomination":"5 центов",
+		"year":1994,
+		"avers":"11.JPG",
+		"revers":"12.JPG"
+	},
+	{
+		"id":7,
+		"countryName":"Австралия",
+		"denomination":"10 центов",
+		"year":1978,
+		"avers":"013.JPG",
+		"revers":"014.JPG"
+	},
+	{
+		"id":8,
+		"countryName":"Австралия",
+		"denomination":"10 центов",
+		"year":2001,
+		"avers":"15.JPG",
+		"revers":"16.JPG"
+	},
+	{
+		"id":9,
+		"countryName":"Австралия",
+		"denomination":"20 центов",
+		"year":1981,
+		"avers":"17.JPG",
+		"revers":"18.JPG"
+	},
+	{
+		"id":10,
+		"countryName":"Австралия",
+		"denomination":"20 центов",
+		"year":2004,
+		"avers":"19.JPG",
+		"revers":"20.JPG"
+	},
+	{
+		"id":11,
+		"countryName":"Австралия",
+		"denomination":"50 центов",
+		"year":1984,
+		"avers":"21.JPG",
+		"revers":"22.JPG"
+	}
+]
