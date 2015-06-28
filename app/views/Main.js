@@ -5,21 +5,27 @@ define(['text!template/Main.html','backbone', 'jqx-all'], function(template){
 
 		render: function(){
 			this.$el.html(this.template());
-			var w = $(window);
-			$('#main').jqxSplitter({ 
-				height: (w.height() * 0.95),
-				width: (w.width() * 0.95), 
-				orientation: 'vertical',
-				panels: [{ size: '30%' }, { size: '40%' }],
+			var wnd = $(window);
+			var main_width = wnd.width() * 0.95 
+			//$(this.Location('ListView')).width(200);
+			//$(this.Location('InfoView')).width(400);
+
+			$('#main').jqxDockPanel({ 
+				height: wnd.height(),
+				width: main_width, 
+				//orientation: 'vertical',
+				//panels: [{ size: '30%' }, { size: '40%' }],
 				//resizable: false
 			});
+
+			
 		},
 		initialize:function(){
-			this.render();
 			this.locations = {
 				ListView: '#master',
 				InfoView: '#detail'
 			}
+			this.render();
 		},
 		
 		Location: function(name){
