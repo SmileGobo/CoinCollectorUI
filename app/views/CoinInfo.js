@@ -2,7 +2,7 @@ define(
     [
         'util/RibbonHtmlBuilder',
         'view/MainCoinInfo',
-        'view/ControlButtonBar',
+        'view/ListButtonBar',
         'backbone'
     ],
     function(Builder, MainInfo, ControlButtonBar) {

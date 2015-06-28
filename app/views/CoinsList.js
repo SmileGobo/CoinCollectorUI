@@ -23,6 +23,21 @@ define(['text!template/CoinsListItem.html','backbone', 'jqx-all'], function(tmpl
 		initialize:function(){
 			this.render();
 			this.$el.on('select', _.bind(this._OnItemSelect, this));
+			this.$el.jqxListBox('selectIndex', this.collection.GetCurrentIndex());
+			var self = this;
+			this.listenTo(this.collection, 'change', function(model){
+				
+				//var val = self._RenderItem(,"", );
+				var data = model.GetAttrs();
+				var index = _.indexOf(this.collection.models,model);
+				console.log(index);
+				this.$el.jqxListBox(
+					'updateAt', 
+					{label:'', value: data}, 
+					index
+				);
+
+			});
 		}
 	});
 

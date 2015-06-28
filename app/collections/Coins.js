@@ -17,10 +17,23 @@ define(['model/Coin','json!data/coins.json', 'backbone'], function(Coin, data){
             this.trigger('CurrentChange', this);
         },
         GetCurrentIndex: function(){
-            return this._curr;
+            return this._cur;
         },
         GetCurrent: function(){
             return this.at(this.GetCurrentIndex());
+        },
+        SwitchToNext: function(up){
+            var index = this.GetCurrentIndex();
+            if (up){
+                if (index == this.collection.length - 1) return;
+                index++;
+            }
+            else{
+                if (index == 0) return;
+                index--;
+
+            }
+            SetSelected(index);
         }
         
     });

@@ -1,7 +1,7 @@
-define(['backbone', 'jqx-all'], function(Backbone){
+define(['text!template/Main.html','backbone', 'jqx-all'], function(template){
 	return Backbone.View.extend({
 		el: 'body',
-		template: _.template('<div id="main"><div id="master"></div><div id="detail"></div></div>'),
+		template: _.template(template),
 
 		render: function(){
 			this.$el.html(this.template());
@@ -10,7 +10,7 @@ define(['backbone', 'jqx-all'], function(Backbone){
 				height: (w.height() * 0.95),
 				width: (w.width() * 0.95), 
 				orientation: 'vertical',
-				panels: [{ size: '30%' }, { size: '70%' }],
+				panels: [{ size: '30%' }, { size: '40%' }],
 				//resizable: false
 			});
 		},
