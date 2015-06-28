@@ -37,10 +37,6 @@ define(
                     el:html_builder.GetPanelDom('main'),
                     collection: this.collection
                 });
-                
-                this._control_bar = new ControlButtonBar({
-                    el:html_builder.GetPanelDom('more')
-                })
             }
         });
     }
