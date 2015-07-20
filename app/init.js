@@ -22,7 +22,6 @@ requirejs.config({
 	    'model':		'models',
 	    /*jqWidgets*/
 
-	    'jqx-all': '/lib/jqwidgets/jqwidgets/jqx-all'
   	},
 
   	/*Экспорт библиотек глобальной области видимости*/
@@ -36,11 +35,7 @@ requirejs.config({
 	    backbone: {
 		    deps: ['jquery', 'underscore'],
 		    exports: 'Backbone'
-	    },
-	    'jqx-all': { 
-	    	export: '$',
-	    	deps: ['jquery']
-	   	}
+	    }
   	}
 
 });
