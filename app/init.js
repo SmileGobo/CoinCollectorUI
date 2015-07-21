@@ -25,7 +25,7 @@ requirejs.config({
   	},
 
   	/*Экспорт библиотек глобальной области видимости*/
-  	shim: {
+/*  	shim: {
   		jquery: {
             exports: '$'
         },
@@ -35,7 +35,8 @@ requirejs.config({
 	    backbone: {
 		    deps: ['jquery', 'underscore'],
 		    exports: 'Backbone'
-	    }
-  	}
+	    },
 
+  	}
+*/
 });
