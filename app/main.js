@@ -1,12 +1,12 @@
 requirejs([
   //view
- // 'view/Main',
+ 	'view/CoinsImage',
   'view/CoinsList',
- // 'view/CoinInfo',
+ 'view/MainCoinInfo',
   //stores
   'collection/Coins'
 
-], function(CoinsList, /*DeviceInfo,*/ CoinsCollection) {
+], function(CoinsImage, CoinsList, MainCoinsInfo, CoinsCollection) {
 	var coins = new CoinsCollection();
 	webix.ui.fullScreen();
 	//var CoinsList = 
@@ -19,7 +19,13 @@ requirejs([
 			cols:[
 				{id:'master_list'},
 				{view: "resizer"},
-				{id:'detail'},
+				{
+					rows:[
+						{id:'img_view'},
+						{id:'detail'},
+						{}
+					]
+				}
 			]	
 		}
 		
@@ -41,11 +47,23 @@ requirejs([
 		}
 	});
 
+	var detail_image = new CoinsImage({
+		el:main_grid.getChild('img_view'),
+		collection: coins
+	});
+	//console.log(MainCoinsInfo);
+	var main_info = new MainCoinsInfo({
+		el:main_grid.getChild('detail'),
+		collection:coins
+	});
+
+
+/*
 	var list_view2 = new CoinsList({
 		el:main_grid.getChild('detail'),
 		collection: coins
 	});
-	
+	*/
 	/*
 	var ui_config ={
                     type:"wide", rows:[

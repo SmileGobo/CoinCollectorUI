@@ -21,9 +21,6 @@ define([], function(){
 			});
 			//console.log(this.collection);
 		},
-		/*render: function(){
-			
-		},*/
 		initialize: function(opts){
 			//console.log(opts);
 			if(opts.config){
@@ -33,8 +30,14 @@ define([], function(){
 			this.config.id = base_id + CoinsList.id_val;
 			CoinsList.id_val++;
 			this.render();
+			//console.log(_.bind);
+			this.widget.attachEvent("onItemClick", _.bind(this.OnItemClick, this));
 			
-			//console.log($$("sidemenu"));
+		},
+		OnItemClick: function(id){
+    		var num = this.widget.getIndexById(id);
+    		this.collection.SetSelected(num);
+    		//... some code here ... 
 		}
 	}, {id_val: 0});
 	return CoinsList;
