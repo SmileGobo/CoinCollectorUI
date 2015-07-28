@@ -3,7 +3,7 @@ requirejs([
  	'view/CoinsImage',
   'view/CoinsList',
  'view/MainCoinInfo',
- 'view/CountryImage'
+ 'view/CountryImage',
   //stores
   'collection/Coins'
 
@@ -57,7 +57,10 @@ requirejs([
 		el:main_grid.getChild('detail'),
 		collection:coins
 	});
-
+	var country_img = new CountryImage({
+		el:main_grid.getChild('country_img'),
+		collection: null //countries
+	});
 
 /*
 	var list_view2 = new CoinsList({
