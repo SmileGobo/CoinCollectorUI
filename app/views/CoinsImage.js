@@ -1,4 +1,4 @@
-define([], function(){
+define(['text!template/CoinsImage.html'], function(tmpl){
 	var CoinsImage = WebixView.extend({
 		
 		config:{
@@ -6,8 +6,8 @@ define([], function(){
 			view:'template', 
 			//height: 180,
 			scroll: false,
-			minHeight: 305,
-			template: '<img src="#avers#" width=300 height=300 /><img src="#revers#" width=300 height=300 /><img src="#edge#" width=300 height=300 />',
+			height: 230,
+			template: tmpl,
 			html: ''
 		},
 		widget: null,

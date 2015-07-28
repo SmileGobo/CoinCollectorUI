@@ -5,6 +5,8 @@ define([], function(){
     return Backbone.Model.extend({
         defaults:{
             id:1,
+            name:"",
+            currency:"",
 		    countryName:"",
 		    denomination:"",
 		    year:0,

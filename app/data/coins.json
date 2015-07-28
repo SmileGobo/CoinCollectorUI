@@ -5,11 +5,12 @@
 		"stateId":3,
 		"denomination":"1 доллар",
 		"name":"",
-		"currency":"цент",
+		"currency":"доллар",
 		"year":1984,
 		"avers":"01.JPG",
 		"revers":"02.JPG",
-		"edge": null
+		"edge": null,
+		"edgeDescription":null
 	},
 	{
 		"id":2,
@@ -21,7 +22,9 @@
 		"name":"",
 		"avers":"03.JPG",
 		"revers":"04.JPG",
-		"edge":"01.JPG"
+		"edge":"01.JPG",
+		"edgeDescription":"Рубчатый"
+
 	},
 	{
 		"id":3,
@@ -33,7 +36,8 @@
 		"year":1988,
 		"avers":"05.JPG",
 		"revers":"06.JPG",
-		"edge": null
+		"edge": null,
+		"edgeDescription":"Губчатый"
 	},
 	{
 		"id":4,
@@ -45,7 +49,8 @@
 		"year":1973,
 		"avers":"07.JPG",
 		"revers":"08.JPG",
-		"edge": null
+		"edge": null,
+		"edgeDescription":"Узорный"
 	},
 	{
 		"id":5,
@@ -57,7 +62,8 @@
 		"year":1968,
 		"avers":"09.JPG",
 		"revers":"010.JPG",
-		"edge": null
+		"edge": null,
+		"edgeDescription":null
 	},
 	{
 		"id":6,
@@ -69,7 +75,9 @@
 		"year":1994,
 		"avers":"11.JPG",
 		"revers":"12.JPG",
-		"edge": null
+		"edge": null,
+		"name":"",
+		"edgeDescription":null
 	},
 	{
 		"id":7,
@@ -82,7 +90,9 @@
 		"year":1978,
 		"avers":"013.JPG",
 		"revers":"014.JPG",
-		"edge": null
+		"edge": null,
+		"name":"",
+		"edgeDescription":null
 	},
 	{
 		"id":8,
@@ -94,7 +104,9 @@
 		"year":2001,
 		"avers":"15.JPG",
 		"revers":"16.JPG",
-		"edge": null
+		"edge": null,
+		"name":"",
+		"edgeDescription":null
 	},
 	{
 		"id":9,
@@ -105,21 +117,26 @@
 		"year":1981,
 		"avers":"17.JPG",
 		"revers":"18.JPG",
-		"edge": null
+		"edge": null,
+		"name":"",
+		"edgeDescription":null
 	},
 	{
 		"id":10,
 		"countryName":"Австралия",
+		"name":"",
 		"denomination":"20 центов",
 		"currency":"цент",
 		"stateId":4,
 		"year":2004,
 		"avers":"19.JPG",
 		"revers":"20.JPG",
-		"edge": null
+		"edge": null,
+		"edgeDescription":null
 	},
 	{
 		"id":11,
+		"name":"Австралийский полтинник",
 		"countryName":"Австралия",
 		"denomination":"50 центов",
 		"currency":"цент",
@@ -127,6 +144,7 @@
 		"year":1984,
 		"avers":"21.JPG",
 		"revers":"22.JPG",
-		"edge": null
+		"edge": null,
+		"edgeDescription":null
 	}
 ]
