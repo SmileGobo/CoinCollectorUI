@@ -2,12 +2,12 @@ requirejs([
   //view
  	'view/CoinsImage',
   'view/CoinsList',
- 'view/MainCoinInfo',
+ 'view/SimpleCoinsInfo',
  'view/CountryImage',
   //stores
   'collection/Coins'
 
-], function(CoinsImage, CoinsList, MainCoinsInfo, CountryImage, CoinsCollection) {
+], function(CoinsImage, CoinsList, SimpleCoinsInfo, CountryImage, CoinsCollection) {
 	var coins = new CoinsCollection();
 	webix.ui.fullScreen();
 	//var CoinsList = 
@@ -32,11 +32,6 @@ requirejs([
 		
 	});
 	main_grid.render();
-	/*var views = main_grid.getChildViews();
-	var location = {
-		master: $(views[0].$view),
-		detail: $(views[2].$view).empty()
-	}*/
 	
 	
 	var list_view = new CoinsList({
@@ -53,7 +48,7 @@ requirejs([
 		collection: coins
 	});
 
-	var main_info = new MainCoinsInfo({
+	var main_info = new SimpleCoinsInfo({
 		el:main_grid.getChild('detail'),
 		collection:coins
 	});

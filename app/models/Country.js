@@ -9,7 +9,7 @@ define([], function(){
 		    flag:null,
             emblem:null,
             yearStart: 0,
-            yearEnd: 0
+            yearEnd: null
 
         },
         GetAttrs:function (){
@@ -25,13 +25,6 @@ define([], function(){
             }
            // console.log(rslt);
             return img_path + rslt;  
-        },
-        GetAversImg: function(){
-            return this._CreateImg('avers');
-        },
-        
-        GetReversImg: function(){
-            this._CreateImg('revers');
         }
         
         
