@@ -6,12 +6,6 @@ define([], function() {
                 { view:"text", name:"countryName", label:"Страна"},
                 { view:"text", name:"year", label:"Год"},
                 { view:"text", name:"denomination", label:"Название"}
-        ]},
-        { 
-            cols: [
-                { view:"text", name:"countryName", label:"Страна"},
-                { view:"text", name:"year", label:"Год"},
-                { view:"text", name:"denomination", label:"Название"}
         ]}
     ];
     var cfg ={

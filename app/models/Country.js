@@ -1,22 +1,21 @@
 define([], function(){
     
     var img_path = window.location.href + 'app/img/coins';
-    var cap_img = 'cap.png';
+    var cap_img =  window.location.href + 'app/img/cap.png';
     return Backbone.Model.extend({
         defaults:{
-            id:1,
-		    countryName:"",
-		    denomination:"",
-		    year:0,
-		    avers:null,
-		    revers:null,
-            gurt:null
+		    country:"",
+		    state:"",
+		    flag:null,
+            emblem:null,
+            yearStart: 0,
+            yearEnd: 0
+
         },
         GetAttrs:function (){
             var rslt = _.clone(this.attributes);
-            rslt.avers = this._CreateImg('avers');
-            rslt.revers = this._CreateImg('revers');
-            rslt.gurt = this._CreateImg('gurt');
+            rslt.flag = this._CreateImg('flag');
+            rslt.emblem = this._CreateImg('emblem');
             return rslt;
         },
         _CreateImg: function(name){

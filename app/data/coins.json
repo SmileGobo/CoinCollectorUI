@@ -5,7 +5,8 @@
 		"denomination":"1 доллар",
 		"year":1984,
 		"avers":"01.JPG",
-		"revers":"02.JPG"
+		"revers":"02.JPG",
+		"edge": null
 	},
 	{
 		"id":2,
@@ -13,7 +14,8 @@
 		"denomination":"1 цент",
 		"year":1984,
 		"avers":"03.JPG",
-		"revers":"04.JPG"
+		"revers":"04.JPG",
+		"edge":"01.JPG"
 	},
 	{
 		"id":3,
@@ -21,7 +23,8 @@
 		"denomination":"2 доллара",
 		"year":1988,
 		"avers":"05.JPG",
-		"revers":"06.JPG"
+		"revers":"06.JPG",
+		"edge": null
 	},
 	{
 		"id":4,
@@ -29,7 +32,8 @@
 		"denomination":"2 цента",
 		"year":1973,
 		"avers":"07.JPG",
-		"revers":"08.JPG"
+		"revers":"08.JPG",
+		"edge": null
 	},
 	{
 		"id":5,
@@ -37,7 +41,8 @@
 		"denomination":"5 центов",
 		"year":1968,
 		"avers":"09.JPG",
-		"revers":"010.JPG"
+		"revers":"010.JPG",
+		"edge": null
 	},
 	{
 		"id":6,
@@ -45,7 +50,8 @@
 		"denomination":"5 центов",
 		"year":1994,
 		"avers":"11.JPG",
-		"revers":"12.JPG"
+		"revers":"12.JPG",
+		"edge": null
 	},
 	{
 		"id":7,
@@ -53,7 +59,8 @@
 		"denomination":"10 центов",
 		"year":1978,
 		"avers":"013.JPG",
-		"revers":"014.JPG"
+		"revers":"014.JPG",
+		"edge": null
 	},
 	{
 		"id":8,
@@ -61,7 +68,8 @@
 		"denomination":"10 центов",
 		"year":2001,
 		"avers":"15.JPG",
-		"revers":"16.JPG"
+		"revers":"16.JPG",
+		"edge": null
 	},
 	{
 		"id":9,
@@ -69,7 +77,8 @@
 		"denomination":"20 центов",
 		"year":1981,
 		"avers":"17.JPG",
-		"revers":"18.JPG"
+		"revers":"18.JPG",
+		"edge": null
 	},
 	{
 		"id":10,
@@ -77,7 +86,8 @@
 		"denomination":"20 центов",
 		"year":2004,
 		"avers":"19.JPG",
-		"revers":"20.JPG"
+		"revers":"20.JPG",
+		"edge": null
 	},
 	{
 		"id":11,
@@ -85,6 +95,7 @@
 		"denomination":"50 центов",
 		"year":1984,
 		"avers":"21.JPG",
-		"revers":"22.JPG"
+		"revers":"22.JPG",
+		"edge": null
 	}
 ]

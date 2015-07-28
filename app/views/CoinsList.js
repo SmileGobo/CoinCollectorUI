@@ -13,7 +13,7 @@ define([], function(){
 		afterRender: function(){
 			
 			this.widget = $$(this.config.id);
-			console.log(this.widget.id);
+			//console.log(this.widget.id);
 			var self = this;
 			this.collection.forEach(function(val, key){
 				self.widget.add(val.attributes);

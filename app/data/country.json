@@ -4,13 +4,17 @@
 		"name":"Австралия",	
 		"fullName":"Австралийский Союз",
 		"yearStart":1901,
-		"yearEnd":null
+		"yearEnd":null,
+		"flag": "01.jpg",
+		"emblem": "11.jpg"
 	},
 	{
 		"id":2,
 		"name":"Россия",
 		"fullName":"Российская федерация",
 		"yearStart":1991,
-		"yearEnd":null
+		"yearEnd":null,
+		"flag": "01.jpg",
+		"emblem": "11.jpg"
 	}
 ]
