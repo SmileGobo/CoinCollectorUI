@@ -22,6 +22,9 @@ define(['model/Coin','json!data/coins.json', 'backbone'], function(Coin, data){
         GetCurrent: function(){
             return this.at(this.GetCurrentIndex());
         },
+        GetCurrentId: function(){
+            return this.GetCurrent().get('id');
+        },
         SwitchToNext: function(up){
             var index = this.GetCurrentIndex();
             if (up){

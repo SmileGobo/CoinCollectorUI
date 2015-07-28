@@ -23,14 +23,14 @@ define([], function(){
 			this.listenTo(this.collection, 'CurrentChange', _.bind(this.OnItemSelect, this));
 			this.render();
 			this.OnItemSelect(this.collection);
-			console.log(this.widget); 
+			//console.log(this.widget); 
 		},
 		OnItemSelect: function(store){
 			var item = store.GetCurrent();
 			var data = item.GetAttrs();
 
 			this.widget.setValues(data);
-			//console.log(rslt);
+			console.log(data);
 		}
 	}, {id_val: 0});
 	return CoinsImage;

@@ -10,7 +10,7 @@ define([], function(){
 		    year:0,
 		    avers:null,
 		    revers:null,
-            gurt:null
+            edge:null
         },
         GetAttrs:function (){
             var rslt = _.clone(this.attributes);
@@ -22,7 +22,7 @@ define([], function(){
         _CreateImg: function(name){
             var rslt = this.get(name);
             if (rslt === null){
-                rslt = cap_img;
+                return cap_img;
             }
            // console.log(rslt);
             return img_path + rslt;  

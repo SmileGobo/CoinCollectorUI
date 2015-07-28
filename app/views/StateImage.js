@@ -1,5 +1,5 @@
-define(['text!template/CountryImage.html'], function(tmpl){
-	var CountryImage = WebixView.extend({
+define(['text!template/StateImage.html'], function(tmpl){
+	var StateImage = WebixView.extend({
 		
 		config:{
 			isolate:true,
@@ -18,7 +18,7 @@ define(['text!template/CountryImage.html'], function(tmpl){
 			if(opts.config){
 				_.extend(this.config, opts.config);
 			}
-			this.config.id = 'ContryImgView' + CountryImage.id_val;
+			this.config.id = 'ContryImgView' + StateImage.id_val;
 			this.listenTo(this.collection, 'CurrentChange', _.bind(this.OnItemSelect, this));
 			this.render();
 			this.OnItemSelect(this.collection);
@@ -30,5 +30,5 @@ define(['text!template/CountryImage.html'], function(tmpl){
 			//console.log(rslt);
 		}
 	}, {id_val: 0});
-	return CountryImage;
+	return StateImage;
 });

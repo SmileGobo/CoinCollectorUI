@@ -31,13 +31,13 @@ define([], function(){
 			CoinsList.id_val++;
 			this.render();
 			//console.log(_.bind);
+			this.widget.select(this.collection.GetCurrentId());
 			this.widget.attachEvent("onItemClick", _.bind(this.OnItemClick, this));
 			
 		},
 		OnItemClick: function(id){
     		var num = this.widget.getIndexById(id);
     		this.collection.SetSelected(num);
-    		//... some code here ... 
 		}
 	}, {id_val: 0});
 	return CoinsList;

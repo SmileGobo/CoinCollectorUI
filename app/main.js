@@ -3,16 +3,14 @@ requirejs([
  	'view/CoinsImage',
   'view/CoinsList',
  'view/SimpleCoinsInfo',
- 'view/CountryImage',
+ 'view/StateImage',
   //stores
   'collection/Coins'
 
-], function(CoinsImage, CoinsList, SimpleCoinsInfo, CountryImage, CoinsCollection) {
+], function(CoinsImage, CoinsList, SimpleCoinsInfo, StateImage, CoinsCollection) {
 	var coins = new CoinsCollection();
 	webix.ui.fullScreen();
-	//var CoinsList = 
-	
-	//
+
 	var main_grid = new WebixView({
 		el: 'body',
 		config:{
@@ -43,7 +41,7 @@ requirejs([
 		}
 	});
 
-	var detail_image = new CoinsImage({
+	var coins_image = new CoinsImage({
 		el:main_grid.getChild('img_view'),
 		collection: coins
 	});
@@ -52,35 +50,9 @@ requirejs([
 		el:main_grid.getChild('detail'),
 		collection:coins
 	});
-	var country_img = new CountryImage({
+	var country_img = new StateImage({
 		el:main_grid.getChild('country_img'),
 		collection: null //countries
 	});
 
-/*
-	var list_view2 = new CoinsList({
-		el:main_grid.getChild('detail'),
-		collection: coins
-	});
-	*/
-	/*
-	var ui_config ={
-                    type:"wide", rows:[
-                        { template:"top", height:35 },
-                        { type:"wide", cols:[
-                            { template:"left" },
-                            { template:"center" },
-                            { template:"right" }
-                        ]},
-                        { template:"bottom", height:35 }
-                    ]
-                };
-
-                var view = new WebixView({
-                    config: ui_config,
-                    el: "body"
-                });
-                console.log(view);
-                view.render();
-	*/
 });

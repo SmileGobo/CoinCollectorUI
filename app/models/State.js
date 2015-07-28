@@ -1,6 +1,6 @@
 define([], function(){
     
-    var img_path = window.location.href + 'app/img/coins';
+    var img_path = window.location.href + 'app/img/state';
     var cap_img =  window.location.href + 'app/img/cap.png';
     return Backbone.Model.extend({
         defaults:{
