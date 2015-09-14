@@ -1,6 +1,6 @@
 requirejs([
   //view
- 	'view/CoinsImage',
+ 'view/CoinsImage',
   'view/CoinsList',
  'view/SimpleCoinsInfo',
  'view/StateImage',
@@ -10,12 +10,13 @@ requirejs([
 
 ], function(CoinsImage, CoinsList, SimpleCoinsInfo, StateImage, SimpleStateInfo, CoinsCollection) {
 	var coins = new CoinsCollection();
-	webix.ui.fullScreen();
+	//webix.ui.fullScreen();
 
 	var main_grid = new WebixView({
 		el: 'body',
 		config:{
 			isolate:true,
+			id: 'main_view',
 			cols:[
 				{id:'master_list'},
 				{view: "resizer"},
@@ -25,7 +26,8 @@ requirejs([
 						{view: 'layout', cols:[{id:'detail'}, {id: 'country'}]}
 					]
 				}
-			]	
+			], 
+			autoHeight: true
 		}
 		
 	});
@@ -55,6 +57,7 @@ requirejs([
 		el: main_grid.getChild('country'),
 		collection: null
 	});
+
 	/*
 	var country_img = new StateImage({
 		el:main_grid.getChild('country_img'),

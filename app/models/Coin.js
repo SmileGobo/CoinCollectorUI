@@ -7,12 +7,13 @@ define([], function(){
             id:1,
             name:"",
             currency:"",
-		    countryName:"",
+		    countryName:"", //удалить
 		    denomination:"",
 		    year:0,
 		    avers:null,
 		    revers:null,
-            edge:null
+            edge:null, 
+            stateId: null
         },
         GetAttrs:function (){
             var rslt = _.clone(this.attributes);
