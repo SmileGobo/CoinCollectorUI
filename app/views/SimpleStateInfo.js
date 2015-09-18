@@ -10,5 +10,11 @@ define(['view/SimpleFormInfo'], function(SimpleFormInfo){
 			]
 		}
 	];
-	return SimpleFormInfo(form, 'Страна&Государство');
+	return SimpleFormInfo.extend({
+		initialize: function(){
+			this.SetFields(form);
+			this.SetName('Страна&Государство');
+			this.Init();
+		}
+	});
 });

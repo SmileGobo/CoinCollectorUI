@@ -6,15 +6,15 @@ define([],function(){
         labelPosition:'top'
     };
     var id_count = 0;
-    return function(fields, label){
+   // return function(fields, label){
     	var SimpleFormInfo = WebixView.extend({
         config:{
             isolate: true,
             elements:  [{ 
                 view:'fieldset',
-                label:label,  //тут параметр
+                label:null,  //тут параметр
                 body:{
-                    rows:fields
+                    rows:null
                 }
             }],
             elementsConfig: cfg,
@@ -26,22 +26,25 @@ define([],function(){
         afterRender:function(){
             this.widget = $$(this.config.id);
         },
-        initialize: function(){
-        	this.config.id += id_count++;
-        	console.log(this.config.id);
-            this.render();
-            this.SetValue(this.collection);
-            this.collection.on('CurrentChange', _.bind(this.SetValue, this));
-
-        },
         SetValue: function(store){
             var item = store.GetCurrent();
             this.widget.setValues(item.GetAttrs());
+        }, 
+        SetName: function(name){
+            this.config.elements[0].label = name;
+        },
+        Init: function(){
+        	this.config.id += id_count++;
+            this.render();
+        },
+        SetFields: function(fields){
+            this.config.elements[0].body.rows = fields;
         }
-
-    });
+        
+        });
+    //});
     //console.log(MainCoinsInfo);
     	return SimpleFormInfo;
-    };
+    //};
     
 });

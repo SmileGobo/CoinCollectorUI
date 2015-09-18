@@ -23,7 +23,8 @@ requirejs([
 				{
 					rows:[
 						{id:'img_view'},
-						{view: 'layout', cols:[{id:'detail'}, {id: 'country'}]}
+						{view: 'layout', cols:[{id:'detail'}, {id: 'country'}]},
+						{}
 					]
 				}
 			], 

@@ -7,5 +7,15 @@ define(['view/SimpleFormInfo'], function(SimpleFormInfo) {
             { view:"text", name:"name", label:"Название"},
             { view:"text", name:"year", label:"Год"},
     ];
-    return SimpleFormInfo(form, 'монета');
+    var label = "Монеты";
+    return SimpleFormInfo.extend({
+        initialize: function(){
+            this.SetFields(form);
+            this.SetName(label);
+            this.Init();
+            
+            this.SetValue(this.collection);
+            this.collection.on('CurrentChange', _.bind(this.SetValue, this));
+        }
+    });
 });
