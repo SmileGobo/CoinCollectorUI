@@ -6,8 +6,8 @@ define([],function(){
         labelPosition:'top'
     };
     var id_count = 0;
-   // return function(fields, label){
-    	var SimpleFormInfo = WebixView.extend({
+   
+    var SimpleFormInfo = WebixView.extend({
         config:{
             isolate: true,
             elements:  [{ 
@@ -39,12 +39,14 @@ define([],function(){
         },
         SetFields: function(fields){
             this.config.elements[0].body.rows = fields;
+        },
+        Widget: function(){
+            return this.widget;
         }
         
-        });
-    //});
-    //console.log(MainCoinsInfo);
-    	return SimpleFormInfo;
-    //};
+    });
+
+    return SimpleFormInfo;
+
     
 });

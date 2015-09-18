@@ -3,7 +3,7 @@
 requirejs.config({
 
 	/*точка входа main.js*/
-	deps:['main'],
+	//deps:['main'],
 	/*debug чтоб не кешировал*/
 	//urlArgs: "bust=" + (new Date()).getTime(),
 	
@@ -39,4 +39,9 @@ requirejs.config({
 
   	}
 */
+
+});
+
+require(['app'], function(AppMain){
+    	AppMain.initialize();
 });

@@ -13,16 +13,12 @@ define([], function(){
 		afterRender: function(){
 			
 			this.widget = $$(this.config.id);
-			//console.log(this.widget.id);
 			var self = this;
 			this.collection.forEach(function(val, key){
 				self.widget.add(val.attributes);
-				//console.log(val, key);
 			});
-			//console.log(this.collection);
 		},
 		initialize: function(opts){
-			//console.log(opts);
 			if(opts.config){
 				_.extend(this.config, opts.config);
 			}
