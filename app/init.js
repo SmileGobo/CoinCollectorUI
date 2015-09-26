@@ -19,9 +19,7 @@ requirejs.config({
 	    'view': 		'views',
 	    'template':		'templates',
 	    'collection':   'collections',
-	    'model':		'models',
-	    /*jqWidgets*/
-
+	    'model':		'models'
   	},
 
   	/*Экспорт библиотек глобальной области видимости*/
