@@ -30,7 +30,7 @@ define(['text!template/CoinsImage.html'], function(tmpl){
 			var data = item.GetAttrs();
 
 			this.widget.setValues(data);
-			//console.log(data);
+			////console.log(data);
 		}
 	}, {id_val: 0});
 	return CoinsImage;
