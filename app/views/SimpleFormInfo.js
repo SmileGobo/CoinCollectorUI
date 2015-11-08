@@ -3,7 +3,7 @@ define([],function(){
 
     var cfg ={ 
         readonly: true,
-        labelPosition:'top'
+        //labelPosition:'top'
     };
     var id_count = 0;
     return function(fields, label){

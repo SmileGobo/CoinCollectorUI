@@ -6,7 +6,7 @@ define(['text!template/CoinsImage.html'], function(tmpl){
 			view:'template', 
 			//height: 180,
 			scroll: false,
-			height: 230,
+			//height: 230,
 			template: tmpl,
 			html: ''
 		},
