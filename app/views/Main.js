@@ -1,4 +1,4 @@
-define(['text!template/Main.html','backbone', 'jqx-all'], function(template){
+define(['text!template/Main.html'], function(template){
 	return Backbone.View.extend({
 		el: 'body',
 		template: _.template(template),

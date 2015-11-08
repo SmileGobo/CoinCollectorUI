@@ -1,4 +1,4 @@
-define(['text!template/ListButtonBar.html','backbone'], function(template){
+define(['text!template/ListButtonBar.html'], function(template){
    return Backbone.View.extend({
        template: _.template(template),
        initialize: function(){

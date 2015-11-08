@@ -1,4 +1,4 @@
-define(['model/Coin','json!data/coins.json', 'backbone'], function(Coin, data){
+define(['model/Coin','json!data/coins.json'], function(Coin, data){
     return Backbone.Collection.extend({
         model: Coin,
         initialize: function(){

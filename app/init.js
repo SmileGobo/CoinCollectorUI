@@ -9,10 +9,10 @@ requirejs.config({
 	
 	paths: {
 		/*Пути к библиотекам*/
-	    'jquery': 		'/lib/js/jquery-1.11.3.min',
-	    'underscore': 	'/lib/js/underscore',
-	    'backbone': 	'/lib/js/backbone',
-	    /*requirejs плагины*/
+	    // 'jquery': 		'/lib/js/jquery-1.11.3.min',
+	    // 'underscore': 	'/lib/js/underscore',
+	    // 'backbone': 	'/lib/js/backbone',
+	    // /*requirejs плагины*/
 	    'text': 		'/lib/js/text',
 	    'json': 		'/lib/js/json',
 
