@@ -34,8 +34,8 @@ define([], function(){
 		},
 		OnItemSelected: function(item){
 			if (!this._IsIgnoreSelect()){
-				var id = 'c' + item.get('id');//выглядит как грязный хак!!!
-				this.root.select(id);
+				//в целом тоже грязный хак
+				this.root.select(item.cid);
 			}
 			this._IgnoreSelect();
 		},

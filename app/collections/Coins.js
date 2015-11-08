@@ -2,12 +2,8 @@ define(['model/Coin','json!data/coins.json'], function(Coin, data){
     return Backbone.Collection.extend({
         model: Coin,
         initialize: function(){
-            /*var models = data.map(function(item){
-                return new Coin
-            });*/
             this.sync();
             this.SetSelected(0);
-           // console.log('coins collection create:', this.at(0));
         },
         sync: function(){
             this.set(data);
@@ -18,7 +14,6 @@ define(['model/Coin','json!data/coins.json'], function(Coin, data){
             }
             this._cur = index;
             this.trigger('CurrentChange', this.GetCurrent());
-
         },
         GetCurrentIndex: function(){
             return this._cur;
@@ -28,7 +23,6 @@ define(['model/Coin','json!data/coins.json'], function(Coin, data){
         },
         GetCurrentId: function(){
             var item = this.GetCurrent();
-            //console.log(item.toJSON());
             return item.get('id');
         },
         SwitchToNext: function(up){

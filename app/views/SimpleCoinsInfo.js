@@ -13,7 +13,7 @@ define(['view/SimpleFormInfo'], function(SimpleFormInfo) {
             this.SetName(label);
             this.Init();
             
-            this.SetValue(this.collection.GetCurrent());
+            //this.SetValue(this.collection.GetCurrent());
             this.collection.on('CurrentChange', _.bind(this.SetValue, this));
         }
     });

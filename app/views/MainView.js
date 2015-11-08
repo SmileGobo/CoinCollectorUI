@@ -1,13 +1,14 @@
 define([],
 function(){
 	return WebixView.extend({
-		el: 'body',
+		el: 'body',			
 		config:{
+			//type: 'space',
 			isolate:true,
 			id: 'main_view',
 			cols:[
 				{id:'master_list'},
-				{view: "resizer"},
+				{view: 'resizer'},
 				{
 					rows:[
 						{id:'img_view'},
