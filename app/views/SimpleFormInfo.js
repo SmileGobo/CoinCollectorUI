@@ -30,12 +30,12 @@ define([],function(){
         	this.config.id += id_count++;
         	console.log(this.config.id);
             this.render();
-            this.SetValue(this.collection);
+            var item = this.collection.GetCurrent();
+            this.SetValue(item);
             this.collection.on('CurrentChange', _.bind(this.SetValue, this));
 
         },
-        SetValue: function(store){
-            var item = store.GetCurrent();
+        SetValue: function(item){
             this.widget.setValues(item.GetAttrs());
         }
 

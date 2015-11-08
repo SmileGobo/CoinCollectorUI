@@ -22,15 +22,14 @@ define(['text!template/CoinsImage.html'], function(tmpl){
 			this.config.id = 'imgView' + CoinsImage.id_val;
 			this.listenTo(this.collection, 'CurrentChange', _.bind(this.OnItemSelect, this));
 			this.render();
-			this.OnItemSelect(this.collection);
+			this.OnItemSelect(this.collection.GetCurrent());
 			//console.log(this.widget); 
 		},
-		OnItemSelect: function(store){
-			var item = store.GetCurrent();
+		OnItemSelect: function(item){
 			var data = item.GetAttrs();
 
 			this.widget.setValues(data);
-			console.log(data);
+			//console.log(data);
 		}
 	}, {id_val: 0});
 	return CoinsImage;
