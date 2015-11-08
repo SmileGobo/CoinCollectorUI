@@ -9,31 +9,41 @@ define([], function(){
 			template:"#denomination# - #countryName#",
 			select: true
 		},
-		widget: null,
+		_ignore_select: false,
 		afterRender: function(){
 			
-			this.widget = $$(this.config.id);
-			var self = this;
-			this.collection.forEach(function(val, key){
-				self.widget.add(val.attributes);
-			});
+			var widget = this.root;
+			widget.sync(this.collection);
+			widget.attachEvent("onItemClick", _.bind(this.OnItemClick, this));
+			var store = this.root.data;
+			//this.collection.SetSelected(0);
 		},
 		initialize: function(opts){
 			if(opts.config){
 				_.extend(this.config, opts.config);
 			}
 			var base_id = 'coins_list';
-			this.config.id = base_id + CoinsList.id_val;
-			CoinsList.id_val++;
+			this.collection.on('CurrentChange', _.bind(this.OnItemSelected, this));
 			this.render();
-			//console.log(_.bind);
-			this.widget.select(this.collection.GetCurrentId());
-			this.widget.attachEvent("onItemClick", _.bind(this.OnItemClick, this));
-			
 		},
 		OnItemClick: function(id){
-    		var num = this.widget.getIndexById(id);
+    		var num = this.root.getIndexById(id);
+    		console.log(num);
+    		this._IgnoreSelect(true);
     		this.collection.SetSelected(num);
+		},
+		OnItemSelected: function(item){
+			if (!this._IsIgnoreSelect()){
+				var id = 'c' + item.get('id');//выглядит как грязный хак!!!
+				this.root.select(id);
+			}
+			this._IgnoreSelect();
+		},
+		_IgnoreSelect: function(val){
+			this._ignore_select = val;
+		},
+		_IsIgnoreSelect: function(){
+			return this._ignore_select;
 		}
 	}, {id_val: 0});
 	return CoinsList;

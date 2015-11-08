@@ -14,12 +14,13 @@ requirejs([
 
 	var main_grid = new WebixView({
 		el: 'body',
+		type: 'space',
 		config:{
 			isolate:true,
 			id: 'main_view',
 			cols:[
 				{id:'master_list'},
-				{view: "resizer"},
+				{view: 'resizer'},
 				{
 					rows:[
 						{id:'img_view'},

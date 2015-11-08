@@ -3,7 +3,7 @@ define([],function(){
 
     var cfg ={ 
         readonly: true,
-        labelPosition:'top'
+        //labelPosition:'top'
     };
     var id_count = 0;
    
@@ -26,8 +26,16 @@ define([],function(){
         afterRender:function(){
             this.widget = $$(this.config.id);
         },
-        SetValue: function(store){
-            var item = store.GetCurrent();
+        initialize: function(){
+        	this.config.id += id_count++;
+        	console.log(this.config.id);
+            this.render();
+            var item = this.collection.GetCurrent();
+            this.SetValue(item);
+            this.collection.on('CurrentChange', _.bind(this.SetValue, this));
+
+        },
+        SetValue: function(item){
             this.widget.setValues(item.GetAttrs());
         }, 
         SetName: function(name){
