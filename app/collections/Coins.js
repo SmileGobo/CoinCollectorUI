@@ -34,7 +34,6 @@ define(['model/Coin','json!data/coins.json'], function(Coin, data){
             else{
                 if (index == 0) return;
                 index--;
-
             }
             SetSelected(index);
         }

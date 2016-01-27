@@ -1,5 +1,12 @@
 define([],
 function(){
+	var coins_tab = {
+		view: 'tabview',
+		cells: [
+			{header: 'Основное', body: {id:'detail', template: 'bbbbb'}},
+			{header: 'Дополнительно', body: {id:'more_detail', template: 'aaaaa'}}
+		]
+	};
 	return WebixView.extend({
 		el: 'body',			
 		config:{
@@ -8,12 +15,15 @@ function(){
 			id: 'main_view',
 			cols:[
 				{id:'master_list'},
-				{view: 'resizer'},
+				//{view: 'resizer'},
 				{
 					rows:[
-						{id:'img_view'},
-						{view: 'layout', cols:[{id:'detail'}, {id: 'country'}]},
-						{}
+						{
+							cols:[{id:'img_view'}, coins_tab]
+						},
+						{
+
+						}
 					]
 				}
 			], 

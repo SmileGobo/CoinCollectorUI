@@ -4,17 +4,17 @@ define(['text!template/CoinsImage.html'], function(tmpl){
 		config:{
 			isolate:true,
 			view:'template', 
-			//height: 180,
 			scroll: false,
 			template: tmpl,
-			html: ''
+			html: '',
+			gravity: 2,
+			minHeight: 220
 		},
 		widget: null,
 		afterRender: function(){
 			this.widget = $$(this.config.id);
 		},
 		initialize: function(opts){
-			//console.log(opts);
 			if(opts.config){
 				_.extend(this.config, opts.config);
 			}

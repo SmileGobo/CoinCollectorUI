@@ -11,7 +11,6 @@ define([], function(){
 		},
 		_ignore_select: false,
 		afterRender: function(){
-			
 			var widget = this.root;
 			widget.sync(this.collection);
 			widget.attachEvent("onItemClick", _.bind(this.OnItemClick, this));

@@ -14,7 +14,7 @@ define(['view/SimpleFormInfo'], function(SimpleFormInfo) {
             this.Init();
             
             //this.SetValue(this.collection.GetCurrent());
-            this.collection.on('CurrentChange', _.bind(this.SetValue, this));
+            this.collection.on('CurrentChange', this.SetValue, this);
         }
     });
 });

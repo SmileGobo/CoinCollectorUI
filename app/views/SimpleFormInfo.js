@@ -26,7 +26,7 @@ define([],function(){
         afterRender:function(){
             this.widget = $$(this.config.id);
         },
-        initialize: function(){
+        /*initialize: function(){
         	this.config.id += id_count++;
         	console.log(this.config.id);
             this.render();
@@ -34,7 +34,7 @@ define([],function(){
             this.SetValue(item);
             this.collection.on('CurrentChange', _.bind(this.SetValue, this));
 
-        },
+        },*/
         SetValue: function(item){
             this.widget.setValues(item.GetAttrs());
         }, 
