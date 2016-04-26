@@ -23,11 +23,16 @@ function(CoinsImage, CoinsList, SimpleCoinsInfo, CoinsStore ){
         		el: layout.getChild('img_view'),
         		collection: this.store
         	}),
-        	info: new SimpleCoinsInfo({
-		        el: layout.getChild('detail'),
+            coins: new SimpleCoinsInfo({
+		        el: layout.getChild('coins'),
 		        collection: this.store
-	        })
+	        }),
+            /*state: new SimpleStateInfo({
+                el: layout.getChild('state')
+            })*/
+
         };
+        console.log(layout.getChild('coins'));
         this.store.SetSelected(0);
 	};
 
